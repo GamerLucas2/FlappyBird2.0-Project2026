@@ -1,16 +1,20 @@
+using System;
 using UnityEngine;
 
 public class PlayerBehaiviour : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    [SerializeField] private float jumpForce = 1;
+    
+    private Rigidbody2D rigidBody;
+    private void Awake()
     {
-        print("Never gonna give you up. Never gonna let you down. Never gonna run around...");
+        rigidBody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetButtonDown("Fire1"))
+            rigidBody.linearVelocity += Vector2.up * jumpForce;
     }
 }
