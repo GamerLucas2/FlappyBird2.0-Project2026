@@ -902,7 +902,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_27
+      name: Restart
       rect:
         serializedVersion: 2
         x: 353
@@ -1254,7 +1254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_46
+      name: GameOverScreen
       rect:
         serializedVersion: 2
         x: 2
@@ -2064,6 +2064,7 @@ TextureImporter:
       Birb-2: 8959818511006310400
       Birb-3: -8191772816379095192
       Game Over: 6341464390685209381
+      GameOverScreen: -489013281449517811
       Get Ready: 3435553997651536362
       Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_0: -3028843797619237106
       Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_10: -5483473539241287296
@@ -2081,7 +2082,6 @@ TextureImporter:
       Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_24: 8851216312826537037
       Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_25: -2651651994790310619
       Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_26: -7737797117912235783
-      Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_27: -5448222425035498909
       Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_28: 2605493221635795637
       Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_29: -2581669481244740618
       Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_3: 335599229034294550
@@ -2102,7 +2102,6 @@ TextureImporter:
       Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_43: -2308190887210959028
       Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_44: 5022205057594878992
       Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_45: -1149763652461100259
-      Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_46: -489013281449517811
       Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_47: -4164417760473522579
       Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_48: -6436550963862677255
       Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites_49: -3016112269392186590
@@ -2139,6 +2138,7 @@ TextureImporter:
       Pipe Up Red: 6144816979141319645
       PipeDown: -9212221691092033360
       PipeUp: -4685103279127582271
+      Restart: -5448222425035498909
       Start: -1655637919
       Title: 4623261541612039627
   mipmapLimitGroupName: 

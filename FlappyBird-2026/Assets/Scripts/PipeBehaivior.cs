@@ -7,16 +7,13 @@ public class PipeBehaivior : MonoBehaviour
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float spawnPos = 1;
     [SerializeField] private float endPos = -1;
-    [SerializeField] private float minHight;
-    [SerializeField] private float maxHight;
 
 
     private void Update()
     {
         transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-
-        if (transform.position.x < endPos)
-            transform.position = new Vector3(spawnPos, Random.Range(minHight, maxHight), transform.position.z);
+        /*if (transform.position.x < endPos)
+            transform.position = new Vector3(spawnPos, Random.Range(minHight, maxHight), transform.position.z);*/
     }
 
     
