@@ -5,8 +5,6 @@ using Random = UnityEngine.Random;
 public class PipeBehaivior : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 2f;
-    [SerializeField] private float spawnPos = 1;
-    [SerializeField] private float endPos = -1;
 
 
     private void Update()
@@ -16,5 +14,8 @@ public class PipeBehaivior : MonoBehaviour
             transform.position = new Vector3(spawnPos, Random.Range(minHight, maxHight), transform.position.z);*/
     }
 
-    
+    private void Start()
+    {
+        Destroy(gameObject, 3f);
+    }
 }

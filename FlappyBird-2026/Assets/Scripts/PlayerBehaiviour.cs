@@ -18,7 +18,7 @@ public class PlayerBehaiviour : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump") && isAllive)
+        if (Input.GetKeyDown(KeyCode.Space) && isAllive)
             rigidBody.linearVelocity = Vector2.up * jumpForce;
         
         transform.rotation=Quaternion.Euler(0f,0f, rigidBody.linearVelocity.y*rotationSpeed);

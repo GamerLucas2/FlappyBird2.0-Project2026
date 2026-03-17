@@ -1,10 +1,10 @@
 using UnityEngine;
+using System.Collections;
 
 public class PipeSpawner : MonoBehaviour
 {
     
     [SerializeField] GameObject pipePrefab;
-    private GameObject pipe;
     [SerializeField] private float elapsedTime;
     [SerializeField] private float spawnRate = 1;
 
@@ -12,10 +12,9 @@ public class PipeSpawner : MonoBehaviour
     [SerializeField] private float minHight;
     [SerializeField] private float maxHight;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        // StartCoroutine(SpawnPipeRoutine());
     }
 
     // Update is called once per frame
@@ -31,7 +30,16 @@ public class PipeSpawner : MonoBehaviour
 
     private void SpawnPipe()
     {
-            pipe = Instantiate(pipePrefab, new Vector3(spawnPos, Random.Range(minHight, maxHight), 0), transform.rotation);
-            Destroy(pipe,5);
+        Instantiate(pipePrefab, new Vector2(spawnPos, Random.Range(minHight, maxHight)), transform.rotation);
     }
+    //* Alternate Method
+    // IEnumerator SpawnPipeRoutine()
+    // {
+    //     while (true)
+    //     {
+    //         yield return new WaitForSeconds(spawnRate);
+    //         SpawnPipe();
+    //     }
+    // }
+    
 }
