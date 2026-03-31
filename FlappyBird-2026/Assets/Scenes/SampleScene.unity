@@ -423,7 +423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &533067125
 RectTransform:
   m_ObjectHideFlags: 0
@@ -785,7 +785,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 2
   rotationSpeed: 10
-  gameManager: {fileID: 1182577531}
 --- !u!212 &1052173336
 SpriteRenderer:
   serializedVersion: 2
@@ -973,8 +972,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: af117a1be8941d44e9e9e535df871b02, type: 2}
+  m_sharedMaterial: {fileID: -5297109813689175596, guid: af117a1be8941d44e9e9e535df871b02, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1099,9 +1098,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40b44a1493e2474f8fe360e24855314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  StartScreen: {fileID: 475878368}
-  GameOverScreen: {fileID: 533067124}
+  startScreen: {fileID: 475878368}
+  gameOverScreen: {fileID: 533067124}
+  gamePlayUI: {fileID: 1639695101}
   scoreText: {fileID: 1083995176}
+  restartButton: {fileID: 1612473350}
   score: 0
 --- !u!4 &1182577532
 Transform:
@@ -1375,7 +1376,7 @@ GameObject:
   - component: {fileID: 1548816005}
   - component: {fileID: 1548816004}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ScoreBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1451,7 +1452,7 @@ GameObject:
   - component: {fileID: 1612473351}
   - component: {fileID: 1612473350}
   m_Layer: 5
-  m_Name: Button
+  m_Name: RestarButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1520,9 +1521,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1182577531}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ResetGame
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1586,7 +1587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1639695102
 RectTransform:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class PlayerBehaiviour : MonoBehaviour
     [SerializeField] private float rotationSpeed = 10f;
     private bool isAllive = true;
     
-    [SerializeField] private GameManager gameManager;
+    // [SerializeField] private GameManager gameManager;
     private Rigidbody2D rigidBody;
     
     private void Awake()
@@ -27,14 +27,14 @@ public class PlayerBehaiviour : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isAllive = false;
-        gameManager.GameOver();
+        GameManager.Instance.GameOver();
         
         if (collision.gameObject.CompareTag("Ground"))
             Time.timeScale = 0;
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
-        gameManager.AddPoint();
+        GameManager.Instance.AddPoint();
     }
 }

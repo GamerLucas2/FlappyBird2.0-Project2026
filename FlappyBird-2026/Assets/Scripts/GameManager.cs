@@ -2,21 +2,33 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject StartScreen;
-    [SerializeField] private GameObject GameOverScreen;
+    public static GameManager Instance { get; private set; }
+    
+    [Header("Panels")]
+    [SerializeField] private GameObject startScreen;
+    [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private GameObject gamePlayUI;
+    
+    [Header("Text")]
     [SerializeField] private TextMeshProUGUI scoreText;
-    private bool isStarted = false;
+    [SerializeField] private Button restartButton;
     
     [SerializeField] public float score = 0f;
+    private bool isStarted = false;
     private float point = 1f;
 
     private void Awake()
     {
-        StartScreen.SetActive(true);
-        GameOverScreen.gameObject.SetActive(false);
+        Instance = this;
+        startScreen.SetActive(true);
+        gameOverScreen.gameObject.SetActive(false);
+        gamePlayUI.gameObject.SetActive(false);
+        
+        restartButton.onClick.AddListener(ResetGame);
         Time.timeScale = 0;
         score = 0f;
     }
@@ -25,7 +37,8 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && isStarted == false)
         {
-            StartScreen.SetActive(false);
+            startScreen.SetActive(false);
+            gamePlayUI.gameObject.SetActive(true);
             isStarted = true;
             Time.timeScale = 1f;
         }
@@ -33,7 +46,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        GameOverScreen.gameObject.SetActive(true);
+        gameOverScreen.SetActive(true);
     }
 
     public void ResetGame()
