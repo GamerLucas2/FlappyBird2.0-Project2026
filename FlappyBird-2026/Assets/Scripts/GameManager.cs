@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private Button restartButton;
     
-    [SerializeField] public float score = 0f;
+    [SerializeField] private float score = 0f;
+    
     private bool isStarted = false;
     private float point = 1f;
 
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        AudioManager.Instance.PlayDieSound();
         gameOverScreen.SetActive(true);
     }
 
@@ -58,5 +60,6 @@ public class GameManager : MonoBehaviour
     {
         score += point;
         scoreText.text = score.ToString();
+        AudioManager.Instance.PlayScoreSound();
     }
 }

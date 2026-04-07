@@ -19,7 +19,10 @@ public class PlayerBehaiviour : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isAllive)
+        {
             rigidBody.linearVelocity = Vector2.up * jumpForce;
+            AudioManager.Instance.PlayFlyingSound();
+        }
         
         transform.rotation=Quaternion.Euler(0f,0f, rigidBody.linearVelocity.y*rotationSpeed);
     }
@@ -28,6 +31,7 @@ public class PlayerBehaiviour : MonoBehaviour
     {
         isAllive = false;
         GameManager.Instance.GameOver();
+        AudioManager.Instance.PlayHitSound();
         
         if (collision.gameObject.CompareTag("Ground"))
             Time.timeScale = 0;

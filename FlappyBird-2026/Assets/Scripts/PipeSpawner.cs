@@ -15,6 +15,7 @@ public class PipeSpawner : MonoBehaviour
     void Start()
     {
         // StartCoroutine(SpawnPipeRoutine());
+        
     }
 
     // Update is called once per frame
